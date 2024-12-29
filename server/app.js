@@ -27,6 +27,9 @@ var corsOptions = {
   origin: 'http://1j2.530.mytemp.website',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
+app.use(cors({
+  origin: ['http://1j2.530.mytemp.website', 'https://1j2.530.mytemp.website'],
+}));
 app.use(cors(corsOptions))
 app.use(logger('dev'));
 app.use(express.json());
