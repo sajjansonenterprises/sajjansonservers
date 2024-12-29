@@ -1,7 +1,7 @@
 
 var express = require('express');
 const EnquiryRegister = require('./models/EnquiryRegister');
-var ContactUs = express.Router();
+var Enquiry = express.Router();
 
 ContactUs.post('/', async (req, res) => {
     const { name,subject, email, message } = req.body;
@@ -31,4 +31,4 @@ ContactUs.post('/', async (req, res) => {
       res.status(500).json({ error: 'Internal server error' });
     }
   });
-  module.exports = EnquiryRegister;
+  module.exports = Enquiry;
