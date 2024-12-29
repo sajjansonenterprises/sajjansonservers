@@ -3,7 +3,8 @@ var express = require('express');
 const EnquiryRegister = require('./models/EnquiryRegister');
 var Enquiry = express.Router();
 
-ContactUs.post('/', async (req, res) => {
+Enquiry.post('/', async (req, res) => {
+    
     const { name,subject, email, message } = req.body;
   
     // Validate incoming data
