@@ -4,7 +4,7 @@ const EnquiryRegister = require('./models/EnquiryRegister');
 var ContactUs = express.Router();
 
 ContactUs.post('/', async (req, res) => {
-    const { name, email, message } = req.body;
+    const { name,subject, email, message } = req.body;
   
     // Validate incoming data
     if (!name || !email || !message) {
@@ -15,6 +15,7 @@ ContactUs.post('/', async (req, res) => {
       // Create a new contact document
       const newContact = new EnquiryRegister({
         name,
+          subject,
         email,
         message,
       });
