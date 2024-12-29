@@ -26,5 +26,5 @@ const millCardSchema = new mongoose.Schema({
 });
 
 // Create and export the model
-const EnquiryRegister = mongoose.model('MillCard', millCardSchema);
+const EnquiryRegister = mongoose.model('Enquiry', millCardSchema);
 module.exports = EnquiryRegister;
