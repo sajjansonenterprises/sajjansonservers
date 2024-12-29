@@ -11,6 +11,7 @@ var usersRouter = require('./routes/users');
 const Signup = require("./routes/Signup");
 const Login = require("./routes/Login");
 const ContactUs = require("./routes/ContactUs");
+const Enquiry = require("./routes/Enquiry");
 const GetAddMillCardData = require("./routes/AdminServer/GetAddMillCardData");
 const GetGallery = require("./routes/AdminServer/GetGallery");
 const GetTestimonials = require("./routes/AdminServer/GetTestimonials");
@@ -44,7 +45,7 @@ app.use('/galleryupload', GetGallery);
 app.use('/sendtestimonial', GetTestimonials);
 app.use('/api/fetchalldata', SendAllData);
 app.use('/api/carousalformdata', GetCarousalData);
-
+app.use('/api/enquiry', Enquiry);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
