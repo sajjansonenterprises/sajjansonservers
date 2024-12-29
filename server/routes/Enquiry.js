@@ -5,6 +5,7 @@ var Enquiry = express.Router();
 
 // POST route to handle new enquiries
 Enquiry.post('/', async (req, res) => {
+  console.log("hiiiiii")
   const { name, subject, email, message } = req.body;
 
   // Validate incoming data
